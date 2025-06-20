@@ -24,8 +24,7 @@ curl -sSL https://github.com/kirey-arch/aur-helper/releases/latest/download/inst
 
 Get the binary from the [latest release page](https://github.com/kirey-arch/aur-helper/releases/latest), then:
 
-chmod +x aur-helper
-sudo mv aur-helper /usr/local/bin/
+chmod +x aur-helper && sudo mv aur-helper /usr/local/bin/
 
 Or:
 
@@ -34,16 +33,11 @@ chmod +x install.sh
 
 🔹 Option 3: Run from Source
 
-git clone https://github.com/kirey-arch/aur-helper
-cd aur-helper
-sudo python3 aur-helper.py
+git clone https://github.com/kirey-arch/aur-helper && cd aur-helper && sudo python3 aur-helper.py
 
 🔹 Option 4: Build Binary from Source (requires pyinstaller)
 
-yay -S pyinstaller
-git clone https://github.com/kirey-arch/aur-helper
-cd aur-helper
-pyinstaller --onefile aur-helper.py
+yay -S pyinstaller && git clone https://github.com/kirey-arch/aur-helper && cd aur-helper && pyinstaller --onefile aur-helper.py
 
 The compiled binary will be available in the dist/ folder.
 
