@@ -1,18 +1,20 @@
 #!/bin/bash
+
 BIN_NAME="aur-helper"
-BIN_PATH="~/aur-helper/$BIN_NAME"
 DEST_PATH="/usr/local/bin/$BIN_NAME"
+RELEASE_URL="https://github.com/kirey-arch/aur-helper/releases/latest/download/$BIN_NAME"
 
+echo "💡 Downloading $BIN_NAME from latest release..."
+curl -L "$RELEASE_URL" -o "$BIN_NAME"
 
-echo " 💡 Installing $BIN_NAME in $DEST_PATH, please wait..."
-
-if [ ! -f "$BIN_PATH" ]; then
-    echo " ❌ Can't found binary on $BIN_PATH"
+if [ ! -f "$BIN_NAME" ]; then
+    echo "❌ Failed to download $BIN_NAME."
     exit 1
 fi
 
-sudo cp "$BIN_PATH" "$DEST_PATH"
-sudo chmod +x "$DEST_PATH"
+echo "🔧 Installing $BIN_NAME to $DEST_PATH..."
+chmod +x "$BIN_NAME"
+sudo mv "$BIN_NAME" "$DEST_PATH"
 
-echo " ✅ Installation successfully completed."
-echo " 👾 Now you can type 'sudo $BIN_NAME' from anywhere to run."
+echo "✅ Installation completed successfully!"
+echo "🚀 You can now run '$BIN_NAME' from anywhere in your terminal."
