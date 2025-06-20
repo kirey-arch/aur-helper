@@ -22,7 +22,7 @@ curl -sSL https://github.com/kirey-arch/aur-helper/releases/latest/download/inst
 
 🔹 Option 2: Download Executable Manually
 
-Get the binary from the latest release page, then:
+Get the binary from the [latest release page](https://github.com/kirey-arch/aur-helper/releases/latest), then:
 
 chmod +x aur-helper
 sudo mv aur-helper /usr/local/bin/
