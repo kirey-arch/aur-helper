@@ -73,7 +73,7 @@ def search_similar_interactive(source, name):
         print(f"{i + 1}. {s}")
 
     try:
-        choice = int(input("\nEnter the number of the package you want to install (0 to cancel): "))
+        choice = int(input("\nEnter the number of the package you want to install/uninstall/purge (0 to cancel): "))
         if choice == 0:
             print("Cancelled.")
             return None
