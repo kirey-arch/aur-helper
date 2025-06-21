@@ -101,16 +101,26 @@ def install_package(source, pkg):
         print(f"❌ Failed to install package '{pkg}'.")
 
 def remove_package(source, pkg, mode="simple"):
-    print(f"Removing {pkg} with {source}... (If an error occurs, check if the app was already removed. If so, ignore it.)")
-    if mode == "simple":
-        run(f"sudo {source} -Rns {pkg} --noconfirm")
-    elif mode == "full":
-        run(f"sudo {source} -Rns {pkg} --noconfirm")
-        run("sudo pacman -Rns $(pacman -Qtdq) --noconfirm")
-    elif mode == "purge":
-        run(f"sudo {source} -Rns {pkg} --noconfirm")
-        run("sudo pacman -Rns $(pacman -Qtdq) --noconfirm")
-        run("sudo pacman -Sc --noconfirm")
+    print(f"Removing {pkg} with {source}...")
+
+    if mode in ["simple", "full", "purge"]:
+        output = run(f"sudo {source} -Rns {pkg} --noconfirm")
+        
+        if output:
+            print(output)
+            print(f"✅ Package '{pkg}' removed successfully.")
+        else:
+            print(f"❌ Failed to remove package '{pkg}'.")
+
+        if mode == "purge":
+            purge_output = run("sudo pacman -Sc --noconfirm")
+            if purge_output:
+                print("🧹 System purged with 'pacman -Sc'.")
+            else:
+                print("⚠️ Failed to purge with 'pacman -Sc'.")
+    else:
+        print(f"❌ Unknown removal mode '{mode}'. Please use 'simple', 'full', or 'purge'.")
+
 
 def main_menu():
     print("\n--- MENU ---")
