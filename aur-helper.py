@@ -88,7 +88,7 @@ def search_similar_interactive(source, name):
 
 def install_package(source, pkg):
     print(f"Installing {pkg} with {source}...")
-    output = run(f"{source} -S {pkg} --noconfirm")
+    output = run(f"sudo {source} -S {pkg} --noconfirm")
     if output:
         print(output)
         print(f"✅ Package '{pkg}' installed successfully.")
