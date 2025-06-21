@@ -64,4 +64,4 @@ See the full license in the LICENSE file or read it online at: https://www.gnu.o
 
 ### 💖 Credits
 
-Built with love, by Kirey (https://github.com/kirey-arch).
+Built with love, by [Kirey](https://github.com/kirey-arch).
