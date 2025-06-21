@@ -3,8 +3,6 @@
 A smart, interactive CLI tool for managing packages on Arch Linux.  
 Install, remove, purge, and even find similarly named packages with fuzzy matching — all from a single command.
 
----
-
 ## ✨ Features
 
 1. 🔍 Intelligent fuzzy search for similar packages (e.g. google-ch → google-chrome)
@@ -16,8 +14,6 @@ Install, remove, purge, and even find similarly named packages with fuzzy matchi
 7. 🔄 System update feature (standard, full AUR, refresh DB, forced update)
 8. 🎛 Fully configurable (colors, confirmations, progress, backup, helper choice)
 
----
-
 ## 📦 Installation
 
 ### 🔹 Option 1: One-liner (Recommended)
@@ -25,8 +21,6 @@ Install, remove, purge, and even find similarly named packages with fuzzy matchi
 curl -sSL https://github.com/kirey-arch/aur-helper/releases/latest/download/install.sh | bash
 
 > Downloads the latest binary and installs it to /usr/local/bin.
-
----
 
 ### 🔹 Option 2: Manual Download
 
@@ -40,15 +34,11 @@ Or run:
 chmod +x install.sh
 ./install.sh
 
----
-
 ### 🔹 Option 3: Run from Source
 
 git clone https://github.com/kirey-arch/aur-helper
 cd aur-helper
 sudo python3 aur-helper.py
-
----
 
 ### 🔹 Option 4: Build from Source (requires pyinstaller)
 
@@ -59,8 +49,6 @@ pyinstaller --onefile aur-helper.py
 
 The compiled binary will be in the dist/ folder.
 
----
-
 ### 🔻 Uninstall
 
 To uninstall aur-helper:
@@ -69,8 +57,6 @@ chmod +x uninstall.sh
 ./uninstall.sh
 
 > This will remove the binary and clean up any files created during installation.
-
----
 
 ## 🧠 Why use aur-helper?
 
@@ -81,16 +67,12 @@ Because the AUR deserves more than a boring CLI.
 
 💜
 
----
-
 ### 🧪 Dependencies
 
 - Python 3.x
 - git, makepkg (required to build AUR helpers like yay or paru)
 
 > The bundled binary includes everything you need.
-
----
 
 ## 📜 License
 
@@ -102,7 +84,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 Read the full license in the [LICENSE](./LICENSE) file or online at:  
 https://www.gnu.org/licenses/gpl-3.0.html
 
----
 
 ## 💖 Credits
 
