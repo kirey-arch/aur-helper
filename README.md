@@ -10,7 +10,7 @@ Install, remove, purge, and even find similarly named packages with fuzzy matchi
 3. Remove packages with optional dependency cleanup
 4. Full purge mode (orphans + cache cleanup)
 5. Auto-installs missing helpers (yay/paru) if needed
-6. Interactive package selection with up to 10 fuzzy results
+6. Interactive package selection with up to 10 fuzzy matches
 
 ## 📦 Installation
 
@@ -18,11 +18,12 @@ Install, remove, purge, and even find similarly named packages with fuzzy matchi
 
 curl -sSL https://github.com/kirey-arch/aur-helper/releases/latest/download/install.sh | bash
 
-> This will download the latest binary and install it to /usr/local/bin.
+> Downloads the latest binary and installs it to /usr/local/bin.
 
-🔹 Option 2: Download Executable Manually
 
-Get the binary from the [latest release page](https://github.com/kirey-arch/aur-helper/releases/latest), then:
+### 🔹 Option 2: Manual Download
+
+Get the binary from the latest release page, then:
 
 chmod +x aur-helper && sudo mv aur-helper /usr/local/bin/
 
@@ -31,17 +32,20 @@ Or:
 chmod +x install.sh
 ./install.sh
 
-🔹 Option 3: Run from Source
+### 🔹 Option 3: Run from Source
 
 git clone https://github.com/kirey-arch/aur-helper && cd aur-helper && sudo python3 aur-helper.py
 
-🔹 Option 4: Build Binary from Source (requires pyinstaller)
+### 🔹 Option 4: Build from Source (requires pyinstaller)
 
-yay -S pyinstaller && git clone https://github.com/kirey-arch/aur-helper && cd aur-helper && pyinstaller --onefile aur-helper.py
+yay -S pyinstaller
+git clone https://github.com/kirey-arch/aur-helper
+cd aur-helper
+pyinstaller --onefile aur-helper.py
 
-The compiled binary will be available in the dist/ folder.
+The compiled binary will be in the dist/ folder.
 
-🧪 Dependencies
+### 🧪 Dependencies
 
 Python 3.x
 
@@ -49,12 +53,15 @@ git, makepkg (required to build AUR helpers like yay or paru)
 
 > The bundled binary includes everything you need.
 
-📜 License
+### 📜 License
 
-MIT License
-You can read the code if you want. Or just trust the binary.
-I’m not a cop.
+This project is licensed under the GNU General Public License v3.0.
 
-💖 Credits
+You are free to use, modify, and redistribute this software — as long as any modified version remains free and open-source under the same license.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY — not even that it works.
 
-Made with love by [Kirey](https://github.com/kirey-arch).
+See the full license in the LICENSE file or read it online at: https://www.gnu.org/licenses/gpl-3.0.html
+
+### 💖 Credits
+
+Built with love, by Kirey (https://github.com/kirey-arch).
